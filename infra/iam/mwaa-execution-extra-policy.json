@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RunNovaCartGlueJob",
+      "Effect": "Allow",
+      "Action": ["glue:StartJobRun", "glue:GetJobRun", "glue:GetJobRuns", "glue:GetJob", "glue:BatchStopJobRun"],
+      "Resource": "arn:aws:glue:__REGION__:__ACCOUNT__:job/novacart_run_sql"
+    },
+    {
+      "Sid": "ReadGlueJobLogs",
+      "Effect": "Allow",
+      "Action": ["logs:GetLogEvents", "logs:FilterLogEvents", "logs:DescribeLogStreams"],
+      "Resource": "arn:aws:logs:__REGION__:__ACCOUNT__:log-group:/aws-glue/*"
+    },
+    {
+      "Sid": "PublishAlerts",
+      "Effect": "Allow",
+      "Action": "sns:Publish",
+      "Resource": "arn:aws:sns:__REGION__:__ACCOUNT__:novacart-pipeline-alerts"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+revenue_rank,customer_id,full_name,tier,country,net_revenue_usd,revenue_orders
+1,C0035,Farah Patel,Silver,IN,20337.77,34
+2,C0091,Arjun Reddy,Bronze,GB,18499.49,35
+3,C0027,Li Mehta,Platinum,IN,17524.83,43
+4,C0066,Liam Weber,Gold,IN,17071.91,39
+5,C0058,Lena Weber,Silver,US,16855.55,39
+6,C0003,Jonas Schmidt,Bronze,IN,16578.56,35
+7,C0079,Meera Kapoor,Bronze,IN,14070.21,34
+8,C0044,Jonas Ng,Bronze,SG,13056.15,33
+9,C0020,Jonas Bose,Bronze,DE,12491.25,32
+10,C0011,Wei Das,Bronze,US,11686.14,22

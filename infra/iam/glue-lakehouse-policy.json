@@ -1,0 +1,34 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "LakehouseBucketReadWrite",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject", "s3:ListBucket", "s3:GetBucketLocation"],
+      "Resource": ["arn:aws:s3:::__BUCKET__", "arn:aws:s3:::__BUCKET__/*"]
+    },
+    {
+      "Sid": "GlueDataCatalog",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase", "glue:GetDatabases", "glue:CreateDatabase", "glue:UpdateDatabase",
+        "glue:GetTable", "glue:GetTables", "glue:CreateTable", "glue:UpdateTable", "glue:DeleteTable",
+        "glue:GetPartition", "glue:GetPartitions", "glue:BatchCreatePartition", "glue:BatchGetPartition",
+        "glue:CreatePartition", "glue:UpdatePartition", "glue:DeletePartition", "glue:BatchDeletePartition",
+        "glue:GetUserDefinedFunctions"
+      ],
+      "Resource": [
+        "arn:aws:glue:__REGION__:__ACCOUNT__:catalog",
+        "arn:aws:glue:__REGION__:__ACCOUNT__:database/*",
+        "arn:aws:glue:__REGION__:__ACCOUNT__:table/*/*",
+        "arn:aws:glue:__REGION__:__ACCOUNT__:userDefinedFunction/*/*"
+      ]
+    },
+    {
+      "Sid": "GlueLogs",
+      "Effect": "Allow",
+      "Action": ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"],
+      "Resource": "arn:aws:logs:__REGION__:__ACCOUNT__:log-group:/aws-glue/*"
+    }
+  ]
+}

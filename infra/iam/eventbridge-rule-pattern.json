@@ -1,0 +1,8 @@
+{
+  "source": ["aws.s3"],
+  "detail-type": ["Object Created"],
+  "detail": {
+    "bucket": { "name": ["__BUCKET__"] },
+    "object": { "key": [{ "wildcard": "input/batch_*/_SUCCESS" }] }
+  }
+}

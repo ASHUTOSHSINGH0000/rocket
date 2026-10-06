@@ -1,0 +1,250 @@
+[
+ {
+  "batch_id": "2",
+  "table_name": "customers",
+  "metric": "rows_deduplicated",
+  "rule": "duplicate (customer_id, updated_at)",
+  "row_count": 4,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "customers",
+  "metric": "rows_in",
+  "rule": "all rows read from bronze",
+  "row_count": 194,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "customers",
+  "metric": "rows_out",
+  "rule": "loaded to silver.customers",
+  "row_count": 185,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "customers",
+  "metric": "rows_quarantined",
+  "rule": "CRM row without updated_at",
+  "row_count": 5,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "dim_customer",
+  "metric": "info",
+  "rule": "CRM rows (valid)",
+  "row_count": 185,
+  "run_ts": "2026-10-06T09:14:45.423Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "dim_customer",
+  "metric": "info",
+  "rule": "SCD2 versions (excl. unknown member)",
+  "row_count": 166,
+  "run_ts": "2026-10-06T09:14:45.423Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "dim_customer",
+  "metric": "info",
+  "rule": "customers with more than one version",
+  "row_count": 34,
+  "run_ts": "2026-10-06T09:14:45.423Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "dim_customer",
+  "metric": "info",
+  "rule": "rows dropped: no tier/country change",
+  "row_count": 19,
+  "run_ts": "2026-10-06T09:14:45.423Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "fact_order_line",
+  "metric": "info",
+  "rule": "fact lines",
+  "row_count": 1933,
+  "run_ts": "2026-10-06T09:14:47.669Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "fact_order_line",
+  "metric": "info",
+  "rule": "lines using an earlier-day FX rate",
+  "row_count": 434,
+  "run_ts": "2026-10-06T09:14:47.669Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "fact_order_line",
+  "metric": "info",
+  "rule": "lines with no FX rate (excluded from USD)",
+  "row_count": 0,
+  "run_ts": "2026-10-06T09:14:47.669Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "fact_order_line",
+  "metric": "info",
+  "rule": "lines with unknown customer (sk -1)",
+  "row_count": 39,
+  "run_ts": "2026-10-06T09:14:47.669Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "fact_order_line",
+  "metric": "info",
+  "rule": "lines with unknown product (category UNKNOWN)",
+  "row_count": 14,
+  "run_ts": "2026-10-06T09:14:47.669Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "fact_order_line",
+  "metric": "info",
+  "rule": "revenue lines",
+  "row_count": 1660,
+  "run_ts": "2026-10-06T09:14:47.669Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "fx_rates",
+  "metric": "info",
+  "rule": "rates loaded",
+  "row_count": 84,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "order_items",
+  "metric": "info",
+  "rule": "return lines",
+  "row_count": 74,
+  "run_ts": "2026-10-06T09:14:42.856Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "order_items",
+  "metric": "info",
+  "rule": "unknown product flagged (loaded)",
+  "row_count": 7,
+  "run_ts": "2026-10-06T09:14:42.856Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "order_items",
+  "metric": "rows_deduplicated",
+  "rule": "duplicate (order_id, line_no) within batch",
+  "row_count": 25,
+  "run_ts": "2026-10-06T09:14:42.856Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "order_items",
+  "metric": "rows_in",
+  "rule": "all rows read from bronze",
+  "row_count": 1007,
+  "run_ts": "2026-10-06T09:14:42.856Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "order_items",
+  "metric": "rows_out",
+  "rule": "candidates sent to MERGE",
+  "row_count": 974,
+  "run_ts": "2026-10-06T09:14:42.856Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "order_items",
+  "metric": "rows_quarantined",
+  "rule": "order does not exist",
+  "row_count": 8,
+  "run_ts": "2026-10-06T09:14:42.856Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "orders",
+  "metric": "info",
+  "rule": "batch candidates older than stored version (not applied)",
+  "row_count": 10,
+  "run_ts": "2026-10-06T09:14:31.770Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "orders",
+  "metric": "info",
+  "rule": "currency derived from shipping_country",
+  "row_count": 25,
+  "run_ts": "2026-10-06T09:14:31.770Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "orders",
+  "metric": "rows_deduplicated",
+  "rule": "older version or exact duplicate within batch",
+  "row_count": 948,
+  "run_ts": "2026-10-06T09:14:31.770Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "orders",
+  "metric": "rows_in",
+  "rule": "all rows read from bronze",
+  "row_count": 1545,
+  "run_ts": "2026-10-06T09:14:31.770Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "orders",
+  "metric": "rows_out",
+  "rule": "candidates sent to MERGE",
+  "row_count": 597,
+  "run_ts": "2026-10-06T09:14:31.770Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "payments",
+  "metric": "rows_deduplicated",
+  "rule": "duplicate payment_id",
+  "row_count": 0,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "payments",
+  "metric": "rows_in",
+  "rule": "all rows read from bronze",
+  "row_count": 1164,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "payments",
+  "metric": "rows_out",
+  "rule": "loaded to silver.payments",
+  "row_count": 1159,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "payments",
+  "metric": "rows_quarantined",
+  "rule": "payment for unknown order",
+  "row_count": 5,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ },
+ {
+  "batch_id": "2",
+  "table_name": "products",
+  "metric": "info",
+  "rule": "products loaded",
+  "row_count": 40,
+  "run_ts": "2026-10-06T09:14:36.363Z"
+ }
+]

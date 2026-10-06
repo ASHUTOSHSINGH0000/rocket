@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CreateMwaaCliToken",
+      "Effect": "Allow",
+      "Action": "airflow:CreateCliToken",
+      "Resource": "arn:aws:airflow:__REGION__:__ACCOUNT__:environment/__MWAA_ENV__"
+    },
+    {
+      "Sid": "LambdaLogs",
+      "Effect": "Allow",
+      "Action": ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"],
+      "Resource": "arn:aws:logs:__REGION__:__ACCOUNT__:*"
+    }
+  ]
+}

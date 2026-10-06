@@ -1,0 +1,10 @@
+.venv/
+lake/
+aws_results/
+pipeline_run_log.txt
+__pycache__/
+*.pyc
+.DS_Store
+spark-warehouse/
+metastore_db/
+derby.log

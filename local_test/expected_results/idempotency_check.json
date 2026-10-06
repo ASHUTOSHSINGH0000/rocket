@@ -1,0 +1,119 @@
+{
+ "runs": [
+  "run1_batch1",
+  "run2_batch2",
+  "run3_batch2"
+ ],
+ "merge_metrics_by_run": [
+  {
+   "table": "-",
+   "operation": "RUN_START",
+   "metrics": {
+    "run": 1,
+    "batch_id": "1"
+   }
+  },
+  {
+   "table": "silver.orders",
+   "operation": "MERGE",
+   "metrics": {
+    "numTargetRowsUpdated": 0,
+    "numTargetRowsInserted": 495,
+    "numTargetRowsAfter": 495
+   }
+  },
+  {
+   "table": "silver.order_items",
+   "operation": "MERGE",
+   "metrics": {
+    "numTargetRowsUpdated": 0,
+    "numTargetRowsInserted": 971,
+    "numTargetRowsAfter": 971
+   }
+  },
+  {
+   "table": "-",
+   "operation": "RUN_START",
+   "metrics": {
+    "run": 2,
+    "batch_id": "2"
+   }
+  },
+  {
+   "table": "silver.orders",
+   "operation": "MERGE",
+   "metrics": {
+    "numTargetRowsUpdated": 137,
+    "numTargetRowsInserted": 450,
+    "numTargetRowsAfter": 945
+   }
+  },
+  {
+   "table": "silver.order_items",
+   "operation": "MERGE",
+   "metrics": {
+    "numTargetRowsUpdated": 12,
+    "numTargetRowsInserted": 962,
+    "numTargetRowsAfter": 1933
+   }
+  },
+  {
+   "table": "-",
+   "operation": "RUN_START",
+   "metrics": {
+    "run": 3,
+    "batch_id": "2"
+   }
+  },
+  {
+   "table": "silver.orders",
+   "operation": "MERGE",
+   "metrics": {
+    "numTargetRowsUpdated": 0,
+    "numTargetRowsInserted": 0,
+    "numTargetRowsAfter": 945
+   }
+  },
+  {
+   "table": "silver.order_items",
+   "operation": "MERGE",
+   "metrics": {
+    "numTargetRowsUpdated": 0,
+    "numTargetRowsInserted": 0,
+    "numTargetRowsAfter": 1933
+   }
+  }
+ ],
+ "rerun_differences": {
+  "silver.orders": {
+   "rows_run2": 945,
+   "rows_run3": 945,
+   "differing_rows": 0
+  },
+  "silver.order_items": {
+   "rows_run2": 1933,
+   "rows_run3": 1933,
+   "differing_rows": 0
+  },
+  "gold.daily_revenue": {
+   "rows_run2": 30,
+   "rows_run3": 30,
+   "differing_rows": 0
+  },
+  "gold.revenue_by_category": {
+   "rows_run2": 7,
+   "rows_run3": 7,
+   "differing_rows": 0
+  },
+  "gold.top_customers": {
+   "rows_run2": 10,
+   "rows_run3": 10,
+   "differing_rows": 0
+  },
+  "gold.payment_mismatches": {
+   "rows_run2": 14,
+   "rows_run3": 14,
+   "differing_rows": 0
+  }
+ }
+}
